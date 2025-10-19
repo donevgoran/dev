@@ -15,6 +15,7 @@ jobs:
         needs: job1
         steps:
             - name: locate the path and list
-              run: pwd; ls
+              uses: actions/setup-node@v6
+              run: node --version
         
     

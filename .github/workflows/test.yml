@@ -1,0 +1,14 @@
+name: first pipeline
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first run on first job1
+        run: echo job1
+  job2:
+    runs-on: windows-latest
+    steps:
+      - name: first run on second job2
+        run: echo job2
+    

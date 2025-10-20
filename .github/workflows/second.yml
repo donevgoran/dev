@@ -33,7 +33,7 @@ jobs:
         needs: job1
         steps:
             - name: job3
-              run: echo "goran and node version is: ${{needs.job1.outputs.job1}}"
+              run: echo "goran and node version is: ${{ needs.job1.outputs.job1 }}"
     
         
     

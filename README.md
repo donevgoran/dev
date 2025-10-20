@@ -2,6 +2,8 @@
 
 The github.dev web-based editor is a lightweight editing experience that runs entirely in your browser. You can navigate files and source code repositories from GitHub, and make and commit code changes.
 
+[![second pipeline](https://github.com/donevgoran/dev/actions/workflows/second.yml/badge.svg)](https://github.com/donevgoran/dev/actions/workflows/second.yml)
+
 There are two ways to go directly to a VS Code environment in your browser and start coding:
 
 * Press the . key on any repository or pull request.

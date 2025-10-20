@@ -10,7 +10,7 @@ jobs:
             - name: locate the path
               run: pwd; ls
 
-    jobs2:
+    job2:
         runs-on: ubuntu-latest
         needs: job1
         steps:
@@ -19,9 +19,9 @@ jobs:
             - name: check node version
               run: node --version
     
-    jobs3:
+    jobs:
         runs-on: ubuntu-latest
-        needs: [jobs1, jobs2]
+        needs: [job1, job2]
         steps:
             - name: job3
               run: echo goran

@@ -16,7 +16,7 @@ jobs:
               id: node_version
               run: echo "npm_version=$(npm --version)" >> $GITHUB_OUTPUT
             - name: check node version from output
-              run: echo "the node version is ${{ steps.node_version.output.npm_version}}"
+              run: echo "the node version is ${{ steps.node_version.outputs.npm_version}}"
 
     job2:
         runs-on: ubuntu-latest

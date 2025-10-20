@@ -12,7 +12,7 @@ jobs:
             - name: using nodejs
               uses: actions/setup-node@v6
             - name: check node version
-              run: npm --version
+              run: npm install
 
     job2:
         runs-on: ubuntu-latest

@@ -5,6 +5,8 @@ on:
 jobs: 
     job1:
         runs-on: ubuntu-latest
+        outputs:
+          job1: ${{ steps.node_version.outputs.npm_version}}"
         steps:
             - name: checkout code
               uses: actions/checkout@v5
@@ -31,7 +33,7 @@ jobs:
         needs: [job1, job2]
         steps:
             - name: job3
-              run: echo goran
+              run: echo goran and node version is: ${{needs.job1.outputs.job1}}
     
         
     

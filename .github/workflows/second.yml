@@ -1,5 +1,5 @@
 name: second pipeline
-on: push
+workflow_dispetch:
 
 jobs: 
     job1:
@@ -12,7 +12,10 @@ jobs:
             - name: using nodejs
               uses: actions/setup-node@v6
             - name: check node version
-              run: npm install
+              run: npm --version >> $GITHUB_OUTPUT
+            - name: check node version from output
+              id: node_version
+              run: echo "the node version is ${{ steps.node_version.outputs.name}}"
 
     job2:
         runs-on: ubuntu-latest

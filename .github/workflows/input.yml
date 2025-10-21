@@ -14,5 +14,5 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-        run: |
+      - run: |
           echo "the default env is: ${{ github.event.inputs.environment }} "

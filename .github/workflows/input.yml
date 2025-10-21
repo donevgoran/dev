@@ -5,7 +5,7 @@ on:
       environment: 
         description: 'provide the env'
         requered: true
-        default: 'dev'
+        default: 'patch-1'
         
     
 

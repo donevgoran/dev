@@ -1,6 +1,7 @@
 name: second pipeline
 on:
   workflow_dispatch:
+  push:
     inputs:
       environment: 
         description: 'provide the env'

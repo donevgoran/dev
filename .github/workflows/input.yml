@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: print from input
         run: |
-          echo "the default env is: ${{ github.events.input.environment }}"
+          echo "the default env is: ${{ github.event.inputs.environment }}"

@@ -1,18 +1,26 @@
-name: second pipeline
+name: Mixed inputs
+
 on:
   workflow_dispatch:
-  push:
     inputs:
-      environment: 
-        description: 'provide the env'
-        requered: true
-        default: 'patch-1'
-        
-    
+      name:
+        type: choice
+        description: Who to greet
+        options: 
+        - monalisa
+        - cschleiden
+      message:
+        required: true
+      use-emoji:
+        type: boolean
+        description: Include 🎉🤣 emojis
+      environment:
+        type: environment
 
 jobs:
-  job1:
+  greet:
     runs-on: ubuntu-latest
+
     steps:
-      - run: |
-          echo "the default env is: ${{ inputs.environment }} "
+    - name: Send greeting
+      run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", "🥳"]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"

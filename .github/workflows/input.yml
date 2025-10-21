@@ -1,0 +1,17 @@
+name: second pipeline
+on:
+  workflow_dispatch:
+    inputs:
+      environment: 
+        description: 'provide the env'
+        requered: true
+        default: 'dev'
+        
+    
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print from input
+        run: echo "the default env is: ${{ github.events.input.environment }}"
